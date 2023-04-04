@@ -1,0 +1,43 @@
+.loop-cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  p {
+    color: white;
+    margin: 10px;
+  }
+}
+
+.project-box {
+  cursor: pointer;
+  border: 1px solid black;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    margin: auto;
+  }
+}
+
+.glass {
+  background: rgba(40, 32, 32, 0.384);
+
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  width: 100%;
+  padding: 50px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+.glass:hover {
+  background: rgba(32, 40, 34, 0.673);
+}

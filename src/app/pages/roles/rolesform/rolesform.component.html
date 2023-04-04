@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>{{id? ('Edit Role'): ('Add Role')}}</h1>
+<div class =' mat-dialog-content' mat-dialog-content [formGroup]="form">
+  <form [formGroup]="form">
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="First Name"  formControlName="name" >
+    </mat-form-field>
+    
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="dialogRef.close()">
+      Close
+    </button>
+    <button mat-raised-button color="primary" (click)="submit()" >
+      Submit
+    </button>
+  </div>

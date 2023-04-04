@@ -1,0 +1,71 @@
+<div>
+  <h2>Project Users</h2>
+
+  <button mat-raised-button color="primary" (click)="addProjectUser()">Add User</button> Or
+
+  <button mat-raised-button color="primary" (click)="chooseUserToggle()">
+    Choose User
+  </button>
+  <div *ngIf="chooseUserActive">
+    <form [formGroup]="userForm" (ngSubmit)="chooseUser()">
+      <mat-form-field>
+        <mat-label>Choose User</mat-label>
+        <mat-select formControlName="userId">
+          <mat-option
+            *ngFor="let eachUser of getAllUsers$ | async"
+            [value]="eachUser.id"
+          >
+            {{ eachUser.firstName }} {{ eachUser.lastName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </div>
+  <div *ngIf="loader"class="loader"></div>
+  <table *ngIf="!loader" mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+    <ng-container matColumnDef="Id">
+      <th mat-header-cell *matHeaderCellDef>id</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.id }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="FirstName">
+      <th mat-header-cell *matHeaderCellDef>First Name</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.firstName }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="LastName">
+      <th mat-header-cell *matHeaderCellDef>Last Name</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.lastName }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="CreatedAt">
+      <th mat-header-cell *matHeaderCellDef>Created at</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.createdAt }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" (click)="delete(element.id)">
+          Delete
+        </button>
+
+        <!-- <button mat-menu-item>Admin</button>
+            <button mat-menu-item>Super Admin</button>
+            <button mat-menu-item>Customer</button> -->
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

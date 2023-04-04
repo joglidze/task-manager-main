@@ -1,0 +1,17 @@
+<div class="container" >
+    <div class="list" cdkDropList [cdkDropListData]="tasks" (cdkDropListDropped)="drop($event)">
+        <mat-card class="list-item" *ngFor="let task of tasks" cdkDrag>
+            <mat-card-content>
+                <p>{{task}}</p>
+            </mat-card-content>
+        </mat-card>
+        
+    </div>
+    <form #newItemForm="ngForm" (ngSubmit)="onSubmit(newItemForm)">
+        <mat-form-field>
+            <input matInput name="newTask" ngModel type="text" placeholder="Enter a new task">
+        </mat-form-field>
+        <button mat-raised-button type="submit" color="primary">Add Task</button>
+    </form>
+   
+</div>

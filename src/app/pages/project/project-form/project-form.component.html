@@ -1,0 +1,95 @@
+<div class="form-cont">
+  <div
+    class="project-blueprint"
+    [ngStyle]="getStyle()"
+    
+  >
+    <div class="background-img"></div>
+    <div class="icon-div">
+      <img src="assets/images/trello-icon.png" alt="trello-icon" />
+    </div>
+    <div class="layout-img">
+      <div>
+        <img src="assets/images/alignment_flow1.png" alt="alignment_flow1" />
+      </div>
+      <div>
+        <img src="assets/images/alignment_flow2.png" alt="alignment_flow2" />
+      </div>
+      <div>
+        <img src="assets/images/alignment_flow1.png" alt="alignment_flow1" />
+      </div>
+    </div>
+  </div>
+
+  <form [formGroup]="createProject" (ngSubmit)="onSubmit()" class="form">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" formControlName="name" />
+    </div>
+    <div>
+      <label for="abbreviation">Abbreviation</label>
+      <input
+        type="text"
+        id="abbreviation"
+        name="abbreviation"
+        formControlName="abbreviation"
+      />
+    </div>
+    <div>
+      <label for="color">Background</label>
+      <div class="color-box-cont">
+        <div *ngFor="let colors of backgroundColor">
+          <button
+            type="button"
+            class="color-box"
+            (click)="onColor(colors); background = ' '"
+            [ngStyle]="{ 'background-color': colors }"
+          ></button>
+        </div>
+
+        <input
+          type="color"
+          id="color-picker"
+          name="color"
+          formControlName="color"
+          [(ngModel)]="color"
+          class="color-box color-picker"
+        />
+      </div>
+    </div>
+    <div class="color-box-cont">
+      <div *ngFor="let img of backgroundImg">
+        <button
+          class="img-box"
+          type="button"
+          (click)="onColor(img)"
+          [ngStyle]="{ 'background-image': 'url(' + img + ')' }"
+        ></button>
+      </div>
+    </div>
+    <input
+      type="text"
+      id="color"
+      name="color"
+      formControlName="color"
+      style="width: 70%"
+      [(ngModel)]="background"
+      placeholder="Choose one above or Create your own"
+      required
+    />
+    <div>
+      <label for="description">Description</label>
+      <textarea
+        formControlName="description"
+        name="description"
+        id="description"
+        cols="30"
+        rows="10"
+        required
+      ></textarea>
+    </div>
+    <div style="text-align: center">
+      <button type="submit">Create Project</button>
+    </div>
+  </form>
+</div>

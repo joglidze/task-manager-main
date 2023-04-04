@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Set Role</h1>
+<div  mat-dialog-content [formGroup]="form">
+  <label>Enter your name</label>
+  <br />
+  <select formControlName="roles">
+    <option [value]="select">Admin</option>
+    <option [value]="select">super Admin</option>
+    <option [value]="select">Character</option>
+  </select>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="dialogRef.close()">
+    Close
+  </button>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+</div>

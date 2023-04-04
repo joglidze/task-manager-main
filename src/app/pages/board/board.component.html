@@ -1,0 +1,36 @@
+<div class="main-container">
+  <mat-toolbar class="toolbar-secondary">
+
+    <div>
+      <button mat-button [matMenuTriggerFor]="menu" #menuTrigger>Select Board<mat-icon>keyboard_arrow_down</mat-icon></button>
+          <mat-menu #menu="matMenu" class="board-list">
+            <ul>
+              <li *ngFor="let board of boards$ |async">
+                <a (click)="getCurrentBoard(board.id)" [routerLink]="['/board', board.id]">{{board.name}}</a>
+                
+              </li>
+            </ul>
+          </mat-menu>
+    </div>
+    <div class="user">{{this.user}}</div>
+    <div class="right-links">
+     <div class="btn-inv" routerLink="/project/setting/projectusers">+ Share</div>
+     <div class="background-img">
+      <img src="../../../assets/images/gallery.png" alt="gallery" />
+     </div>
+    </div>
+  </mat-toolbar>
+  
+  <div class="container" >
+    <div class="content" [ngStyle]="getStyle(project.color)">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+</div>
+
+<!-- <div *ngIf="!board">
+  <h1>Please Choose Board</h1>
+</div> -->
+
+

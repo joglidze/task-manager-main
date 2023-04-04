@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>{{userId? ('Edit User'): ('Add User')}}</h1>
+<div class =' mat-dialog-content' mat-dialog-content [formGroup]="form">
+  <form [formGroup]="form">
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="First Name"  formControlName="firstName" >
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Last Name"  formControlName="lastName" >
+    </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+      <mat-label>Identity Number</mat-label>
+      <input matInput placeholder="Identity Number"  formControlName="identityNumber" >
+    </mat-form-field>
+
+  
+   <mat-form-field class="example-full-width">
+      <mat-label>email</mat-label>
+      <input matInput placeholder="Email"  formControlName="email" >
+    </mat-form-field>
+    
+  <mat-form-field class="example-full-width">
+        <mat-label>Mobile Number</mat-label>
+        <input matInput placeholder="mobileNumber"  formControlName="mobileNumber" >
+    </mat-form-field>
+  </form>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="dialogRef.close()">
+      Close
+    </button>
+    <button mat-raised-button color="primary" (click)="onSubmit()" >
+      Submit
+    </button>
+  </div>
+</div>

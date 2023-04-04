@@ -1,0 +1,54 @@
+<div class="main-cont">
+  <div>
+    <h1>my Boards</h1>
+    <div>
+      <div class="loop-cont">
+        <div *ngFor="let board of myBoard">
+          <div class="project-box">
+            <div class="glass">
+              <p>{{ board.name }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-box" routerLink="/project/setting/boards">
+          <div class="glass">
+            <button>+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div  appRoles>
+      <h1>All Projects</h1>
+      <div>
+        <div *ngFor="let project of fullProjects">
+          <div>
+            <h2>{{ project.name }} (Boards)</h2>
+          </div>
+          <div class="loop-cont">
+            <div class="project-box" > 
+              <div class="glass" (click)="selectProject(project)">
+                <button>+</button>
+              </div>
+            </div>
+            <div *ngFor="let board of project.boards">
+              <div class="project-box" [ngStyle]="getStyle(project.color)">
+                <div class="glass" (click)="selectProject(project)">
+                  <div *ngIf="!board.name">
+                    
+                  </div>
+                  <p>{{ board.name }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

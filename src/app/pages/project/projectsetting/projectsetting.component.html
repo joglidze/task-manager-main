@@ -1,0 +1,95 @@
+<div class="main-cont">
+    <div class="glass-morphism side-bar-sizing">
+      <ul>
+        <li>
+            
+          <div
+            class="list-style"
+            routerLinkActive="active-button"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/project/setting/about"
+          >
+            <mat-icon>info</mat-icon>
+            About       
+         </div>
+        </li>
+        <li>
+            
+          <div
+            class="list-style"
+            routerLinkActive="active-button"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/project/setting/boards"
+          >
+            <mat-icon>dashboard</mat-icon>
+            Boards       
+         </div>
+        </li>
+        <li>
+            
+          <div
+            class="list-style"
+            routerLinkActive="active-button"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/project/setting/issuetypes"
+          >
+            <mat-icon>title</mat-icon>
+            Issue Types       
+         </div>
+        </li>
+        <li>
+            
+          <div
+            class="list-style"
+            routerLinkActive="active-button"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/project/setting/epics"
+          >
+            <mat-icon>circlerounded</mat-icon>
+            Epics       
+         </div>
+        </li>
+        <li>
+            
+          <div
+            class="list-style"
+            routerLinkActive="active-button"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/project/setting/projectusers"
+          >
+            <mat-icon>peoplealt</mat-icon>
+            Project Users       
+         </div>
+        </li>
+        <!-- <li
+          class="list-style"
+          routerLinkActive="active-button"
+          routerLink="ProjectForm"
+        >
+          <mat-icon>developer_board</mat-icon>
+          <span>Board</span>
+        </li>
+        <li
+          class="list-style"
+          routerLink="contruction"
+          routerLinkActive="active-button"
+        >
+          <mat-icon> format_color_fill</mat-icon>
+          <span>Template</span>
+        </li>
+        <li class="list-style disabled">
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </li>
+        <li class="list-style"
+        routerLink="issueTypesForm"
+        >
+          <mat-icon>issue types</mat-icon>
+          <span>issue types</span>
+        </li> -->
+      </ul>
+    </div>
+    <div class="glass-morphism board-sizing">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

@@ -1,0 +1,43 @@
+<div class="main-cont">
+  <div>
+    <h2>myProjects</h2>
+
+    <div class="loop-cont">
+      <div *ngFor="let myProject of myProjects">
+        <div
+          class="project-box"
+          (click)="selectProject(myProject)"
+          [ngStyle]="getStyle(myProject.color)"
+        >
+          <div class="glass">
+            <span class="">{{ myProject.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <button>Add Project</button>
+    </div>
+  </div>
+
+  <div class="user-cont"></div>
+  <div appRoles>
+    <h2>All projects</h2>
+    <div class="loop-cont">
+      <div *ngFor="let project of projects">
+        <div 
+          class="project-box"
+          (click)="selectProject(project)"
+          [ngStyle]="getStyle(project.color)"
+        >
+          <div class="glass">
+            <span>{{ project.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+</div>

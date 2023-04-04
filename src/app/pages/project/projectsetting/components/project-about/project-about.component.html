@@ -1,0 +1,35 @@
+<div [ngStyle]="getStyle(project.color)" class="main-cont">
+  <div class="main-info">
+    <div>
+      <div>
+        <h1>Project Info</h1>
+      </div>
+      <div>
+        <h2>Project Name(Abbr.):</h2>
+        <span>{{ project.name }}({{ project.abbreviation }})</span>
+      </div>
+      <div>
+        <h2>Project Description:</h2>
+        <span>{{ project.description }}</span>
+      </div>
+      <div>
+        <h2>Create Date</h2>
+        <span>{{ project.createdAt }}</span>
+      </div>
+      <div>
+        <h2>Last upDate</h2>
+        <span>{{ project.updatedAt }}</span>
+      </div>
+      <div>
+        <h2>Project Users</h2>
+        <div class="user-cont">
+          <div *ngFor="let user of projectUsers">
+            <span class="user-box"
+              >{{ user.firstName[0] }}.{{ user.lastName[0] }}</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

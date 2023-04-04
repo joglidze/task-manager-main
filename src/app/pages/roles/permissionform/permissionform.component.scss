@@ -1,0 +1,19 @@
+.container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  
+    .group {
+     border: 1px solid #ccc;
+      padding: 10px;
+      
+      .permission {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+  .group-name{
+    font-weight: bold;
+}

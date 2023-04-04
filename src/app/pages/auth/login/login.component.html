@@ -1,0 +1,32 @@
+<form [formGroup]="form" class="center-content" (submit)="submit()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input 
+    matInput 
+    placeholder="Your email"
+    name="email"
+    formControlName="email">
+    <mat-error *ngIf="getEmail?.errors?.['required'] && getEmail?.touched">Email is required</mat-error>
+    <mat-error *ngIf="getEmail?.errors?.['email'] && getEmail?.touched">Email form isn't correct</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input
+    type="password"
+    matInput 
+    placeholder="Your password"  
+    name="password"
+    formControlName="password">
+    <mat-error *ngIf="getPassword?.errors?.['required'] && getPassword?.touched">Password is required</mat-error>
+    <mat-error *ngIf="getPassword?.errors?.['minlength'] && getPassword?.touched">Password length must be more than 3 characters</mat-error>
+    <mat-error *ngIf="getPassword?.errors?.['maxlength'] && getPassword?.touched">Password length must be less than 10 characters</mat-error>
+  </mat-form-field>
+  
+  <button type="submit" mat-raised-button color="primary">Submit</button> <br>
+
+</form>
+
+
+        
+      

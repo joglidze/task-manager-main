@@ -1,0 +1,9 @@
+  
+<div class="list-container"  >
+    <div class="col-cont"  cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="onColumnDrop($event)">
+      <div class="sm-cont" cdkDropListGroup>
+        <app-list cdkDrag *ngFor="let list of lists"></app-list>
+      </div>
+    </div>
+    <button (click)="addList()" mat-raised-button color="primary">Add List</button>
+</div>

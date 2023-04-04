@@ -1,0 +1,26 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    button{
+        width: 100px;
+        gap: 20px;
+    }
+}
+
+.column-container {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap:10px;
+  }
+
+  .column-cont-background {
+    background: rgba(169, 177, 225, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 20px;
+    padding: 30px;
+    width: 250px;
+  }

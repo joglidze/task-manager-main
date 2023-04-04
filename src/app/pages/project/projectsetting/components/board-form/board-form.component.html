@@ -1,0 +1,64 @@
+<div>
+  <h1>Board feature</h1>
+</div>
+<div>
+  <form [formGroup]="boardForm" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input
+          matInput
+          placeholder="Description"
+          formControlName="description"
+        />
+      </mat-form-field>
+
+      <button
+        type="button"
+        mat-raised-button
+        color="primary"
+        (click)="addColumn()"
+      >
+        Add Column
+      </button>
+      <button type="submit" mat-raised-button color="primary">Save</button>
+    </div>
+
+    <div formArrayName="columns">
+      <div class="column-container">
+        <div *ngFor="let column of columnArr.controls; let i = index">
+          <div [formGroupName]="i" class="column-cont-background">
+            <div>
+              <mat-form-field>
+                <mat-label>Column Name</mat-label>
+                <input matInput placeholder="Name" formControlName="name" />
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Description</mat-label>
+                <input
+                  matInput
+                  placeholder="Description"
+                  formControlName="description"
+                />
+              </mat-form-field>
+              <div>
+                <mat-form-field>
+                  <mat-label>taskStatus</mat-label>
+                  <mat-select formControlName="taskStatus">
+                    <mat-option value="ToDo">To Do</mat-option>
+                    <mat-option value="InProgress">In Progress</mat-option>
+                    <mat-option value="Done">Done</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

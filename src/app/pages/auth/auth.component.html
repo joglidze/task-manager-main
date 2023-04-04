@@ -1,0 +1,46 @@
+<div class="context">
+  <div fxLayoutAlign="center center" class="auth-cont">
+    <div style="margin: auto">
+      <div class="trello">
+        <img src="assets/images/logo.png" alt="logo" width="100px" />
+        <p>Trello Manager</p>
+      </div>
+    </div>
+    <div>
+      <mat-card class="example-card">
+        <nav mat-tab-nav-bar class="example-card">
+          <a
+            mat-tab-link
+            class="center-content"
+            *ngFor="let link of navLinks"
+            [routerLink]="link.link"
+            routerLinkActive
+            #rla="routerLinkActive"
+            [active]="rla.isActive"
+          >
+            {{ link.label }}
+          </a>
+        </nav>
+
+        <div style="z-index: 5;">
+          <router-outlet></router-outlet>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div class="area">
+  <ul class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>

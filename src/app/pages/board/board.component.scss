@@ -1,0 +1,101 @@
+.main-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+.toolbar-secondary{
+    border-top: 0.1px solid #ffffffa7;
+    border-bottom: 0.1px solid #ffffffa7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #026aa7;
+    color: white;
+    height: 44px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    img{
+        width: 50px;
+        height: 50px;
+    }
+    .user{
+        border-radius: 50%;
+        background-color: rgb(0, 141, 85);
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .right-links{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .btn-inv{
+            background-color: #ffffff;
+            border: 1px solid #026aa7;
+            color: white;
+            font-weight: 400;
+            font-size: 14px;
+            height: 32px;
+            width: 76px;
+            color: black;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            &:hover{
+                background-color: #026aa7;
+                border: .1px solid #ffffffa7;
+                color: white;
+            }
+        }
+        .background-img{
+            height: 32px;
+            width: 40px;
+            text-align: center;
+            border-radius: 4px;
+            &:hover{
+                background-color: #00649d;
+                cursor: pointer;
+
+            }
+            
+        img{
+            width: 20px;
+            height: 20px; 
+            margin-bottom: 5px;           
+        }
+
+        }
+        .select-boards{
+            height: 36px;
+        }
+    
+    }
+
+}
+.container {
+    display: flex; 
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+    
+    .content {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      overflow-x: auto;
+
+    }
+}
+
+

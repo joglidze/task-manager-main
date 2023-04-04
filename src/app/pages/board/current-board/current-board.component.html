@@ -1,0 +1,28 @@
+<div class="b-container">
+  <h1>{{board.name}}</h1>
+  <div class="columns" >
+    <div class="med-cont" cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="onColumnDrop($event)">
+      <div class="sml-cont" cdkDropListGroup>
+        <div class="column"
+        cdkDrag
+       cdkDropList 
+       *ngFor="let column of board.columns"
+       [cdkDropListData]="tasks[column.id] || []"
+      (cdkDropListDropped)="drop($event,column)">
+        <h5>{{column.name}}</h5>
+        <mat-card class="card" *ngFor="let task of tasks[column.id] || []"  cdkDrag>
+          <mat-card-content class="card-content">
+            <p>{{task.description}}</p>          
+          </mat-card-content>
+          <h5 class="edit" (click)="viewTask(task,column)"><mat-icon class="icon">edit</mat-icon></h5>
+        </mat-card>
+        <button (click)="addTask(column)">✛ Add Task</button>
+      </div>
+      
+      </div>
+    </div>
+    
+    
+    <div class="add-column" routerLink="/project/setting/boards" >+ Add another Column</div>
+  </div>
+</div>

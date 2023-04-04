@@ -1,0 +1,67 @@
+<div *ngIf="errorMessage">{{errorMessage}}</div>
+
+<form [formGroup]="form" class="center-content" (submit)="submit()">
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>First name</mat-label>
+    <input 
+    matInput 
+    placeholder="Your fast name"
+    name="firstName"
+    formControlName="firstName">
+    <mat-error *ngIf="getFirstName?.errors?.['required'] && getFirstName?.touched">First Name is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Last name</mat-label>
+    <input 
+    matInput 
+    placeholder="Your last name"
+    name="lastName"
+    formControlName="lastName">
+    <mat-error *ngIf="getLastName?.errors?.['required'] && getLastName?.touched">Last Name is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input 
+    matInput 
+    placeholder="example@yahoo.com"
+    name="email"
+    formControlName="email">
+    <mat-error *ngIf="getEmail?.errors?.['required'] && getEmail?.touched">Email is required</mat-error>
+    <mat-error *ngIf="getEmail?.errors?.['email'] && getEmail?.touched">Email form isn't correct</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input 
+    type='password'
+    matInput placeholder="Your password"
+    name="password"
+    formControlName="password">
+    <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button> -->
+    <mat-error *ngIf="getPassword?.errors?.['required'] && getPassword?.touched">Password is required</mat-error>
+    <mat-error *ngIf="getPassword?.errors?.['minlength'] && getPassword?.touched">Password length must be more than 3 characters</mat-error>
+    <mat-error *ngIf="getPassword?.errors?.['maxlength'] && getPassword?.touched">Password length must be less than 10 characters</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Confirm Password</mat-label>
+    <input 
+    type="password" 
+    matInput placeholder="Confirm password"
+    name="confirmpassword"
+    formControlName="confirmPassword">
+    <mat-error *ngIf="getConfirmPassword?.invalid && getConfirmPassword?.touched"> Confirm Password is empty or it doesn't match to password</mat-error>
+
+  </mat-form-field>
+
+
+ 
+  <button type="submit" mat-raised-button color="primary">Submit</button> <br>
+</form>
+

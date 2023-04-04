@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Set Role</h1>
+<div mat-dialog-content [formGroup]="form">
+  <mat-form-field appearance="fill">
+    <mat-label  >Select me</mat-label>
+    <mat-select multiple formControlName="roles">
+      <div *ngFor="let role of roles">
+        <mat-option [value]='role.id' >{{role.name}}</mat-option>
+
+      </div>
+      
+    </mat-select>
+    <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="dialogRef.close()">
+    Close
+  </button>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+</div>
