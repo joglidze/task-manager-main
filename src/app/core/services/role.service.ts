@@ -46,5 +46,4 @@ export class RoleService extends BaseService {
   }): Observable<any> {
     return this.post(`role/permissions`, params);
   }
- 
 }
