@@ -1,7 +1,7 @@
 # TaskManagerFront
 
 
-SITE LINK:https://jocular-tartufo-1c2e2c.netlify.app/home
+SITE LINK:<a href="https://jocular-tartufo-1c2e2c.netlify.app"  target="_blank" >https://jocular-tartufo-1c2e2c.netlify.app</a> 
 
 ## Development server
 
