@@ -1,6 +1,7 @@
 # TaskManagerFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+
+SITE LINK:https://jocular-tartufo-1c2e2c.netlify.app/home
 
 ## Development server
 
