@@ -24,14 +24,26 @@ To run this app on your local machine, follow these steps:
 1. Clone the repository:
 
 https://github.com/joglidze/task-manager-main.git
+
+
+
 2. Navigate to the project directory:
+
 ```cmd
 cd task-manager-app
 
 ```
 3. Install the dependencies:
 
+```cmd
+npm install
+```
+
 4. Run the app:
+
+```cmd
+ng serve --open
+```
 
 The app should now be running on `http://localhost:4200/`.
 
