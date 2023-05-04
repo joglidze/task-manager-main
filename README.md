@@ -12,10 +12,13 @@ Welcome to the Task Manager app! This is a web-based project management tool tha
 - Issue type creation and management
 - Epic creation and management
 - User assignment to projects and tasks
-
+- Multiple roles (Super Admin, Admin)
+- Different views for Super Admin and Admin
+- Super Admin can change user roles from Admin to Super Admin
+- Secure authentication and authorization
 ## Demo
 
-You can view a live demo of the app [here](https://taskmanagerapp.com).
+You can view a live demo of the app [here](https://majestic-brigadeiros-eb78b9.netlify.app).
 
 ## Installation
 
@@ -53,15 +56,24 @@ To use the app, follow these steps:
 
 1. Register a new account or log in to an existing account.
 
-2. Create a new project by clicking on the "Create Project" button on the dashboard. Enter a name and description for the project.
+2. If you are a Super Admin, you can see all the projects, users, and tasks in the system. If you are an Admin, you can only see the projects that you are assigned to.
 
-3. Add users to the project by clicking on the "Add Users" button on the project page. You can assign users different roles, such as project manager or team member.
+3. To log in as the Super Admin, use the following credentials:
+- Email: lukajoglidze@gmail.com
+- Password: 123456789
+           
+4. Create a new project by clicking on the "Create Project" button on the dashboard. Enter a name and description for the project.
 
-4. Create tasks for the project by clicking on the "Create Task" button on the project page. Enter a name and description for the task, and assign it to a user.
+5. Add users to the project by clicking on the "Add Users" button on the project page. You can assign users different roles, such as project manager or team member.
 
-5. Create boards, issue types, and epics for the project by clicking on the respective buttons on the project page.
+6. Create tasks for the project by clicking on the "Create Task" button on the project page. Enter a name and description for the task, and assign it to a user.
 
-6. Collaborate with other users by assigning tasks to them and leaving comments on tasks.
+7. Create boards, issue types, and epics for the project by clicking on the respective buttons on the project page.
+
+8. Collaborate with other users by assigning tasks to them and leaving comments on tasks.
+
+9. If you are a Super Admin, you can change the role of an Admin to a Super Admin by clicking on the "Edit User" button on the Users page.
+
 
 
 
