@@ -1,28 +1,54 @@
-# TaskManagerFront
+# Task Manager App
+
+Welcome to the Task Manager app! This is a web-based project management tool that helps teams stay organized and on track. With this app, you can create projects, assign tasks, and collaborate with other users to get work done efficiently.
+
+## Features
+
+- User registration and login
+- User profile management
+- Project creation and management
+- Task creation and management
+- Board creation and management
+- Issue type creation and management
+- Epic creation and management
+- User assignment to projects and tasks
+
+## Demo
+
+You can view a live demo of the app [here](https://taskmanagerapp.com).
+
+## Installation
+
+To run this app on your local machine, follow these steps:
+
+1. Clone the repository:
 
 
-SITE LINK:<a href="https://majestic-brigadeiros-eb78b9.netlify.app"  target="_blank" >https://majestic-brigadeiros-eb78b9.netlify.app</a> 
+2. Navigate to the project directory:
 
-## Development server
+3. Install the dependencies:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+4. Run the app:
 
-## Code scaffolding
+The app should now be running on `http://localhost:4200/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+To use the app, follow these steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Register a new account or log in to an existing account.
 
-## Running unit tests
+2. Create a new project by clicking on the "Create Project" button on the dashboard. Enter a name and description for the project.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Add users to the project by clicking on the "Add Users" button on the project page. You can assign users different roles, such as project manager or team member.
 
-## Running end-to-end tests
+4. Create tasks for the project by clicking on the "Create Task" button on the project page. Enter a name and description for the task, and assign it to a user.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+5. Create boards, issue types, and epics for the project by clicking on the respective buttons on the project page.
 
-## Further help
+6. Collaborate with other users by assigning tasks to them and leaving comments on tasks.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contributing
+
+If you would like to contribute to this project, please open an issue or submit a pull request.
+
