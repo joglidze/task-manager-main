@@ -23,7 +23,7 @@ To run this app on your local machine, follow these steps:
 
 1. Clone the repository:
 
-https://github.com/joglidze/task-manager-main.git
+    https://github.com/joglidze/task-manager-main.git
 
 
 
@@ -63,7 +63,5 @@ To use the app, follow these steps:
 
 6. Collaborate with other users by assigning tasks to them and leaving comments on tasks.
 
-## Contributing
 
-If you would like to contribute to this project, please open an issue or submit a pull request.
 
