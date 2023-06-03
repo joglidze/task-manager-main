@@ -16,9 +16,7 @@ Welcome to the Task Manager app! This is a web-based project management tool tha
 - Different views for Super Admin and Admin
 - Super Admin can change user roles from Admin to Super Admin
 - Secure authentication and authorization
-## Demo
 
-You can view a live demo of the app [here](https://majestic-brigadeiros-eb78b9.netlify.app).
 
 ## Installation
 
